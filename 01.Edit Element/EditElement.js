@@ -1,4 +1,4 @@
 function editElement(element,match,replace) {
-element.innerHTML=element.innerHTML.replace(match,replace);
-return element.innerHTML;
+element.textContent=element.textContent.replace(new RegExp( match,'g'),replace);
+
     }

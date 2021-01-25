@@ -1,9 +1,5 @@
 function extractText() {
-   let htmlliElements = Array.from( document.getElementsByTagName('li'));
-   let result='';
-    for (const line of htmlliElements) {
-        result+=line.innerHTML+'\n';
-    }
-    document.getElementById("result").innerHTML=result;
-
+  const liElements=[...document.getElementsByTagName('li')];
+  const elementText=liElements.map(e=>e.textContent);
+  document.getElementById('result').value=elementText.join('\n');
 }
